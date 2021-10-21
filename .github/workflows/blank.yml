@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: v`cat VERSION`
           release_name: Release $(cat VERSION)
           body: |
             Changes in this Release
