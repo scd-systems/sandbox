@@ -24,6 +24,16 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Create release
-        run: gh release create v0.0.1 --title "v0.0.1 (alpha)" --notes "this is an alpha release" --prerelease
-  
+      - name: Create release  
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: true
