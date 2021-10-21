@@ -21,3 +21,9 @@ jobs:
         with:
           name: homework
           path: work.txt
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release
+        run: gh release create v0.0.1 --title "v0.0.1 (alpha)" --notes "this is an alpha release" --prerelease
+  
