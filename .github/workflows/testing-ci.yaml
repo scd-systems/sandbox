@@ -19,16 +19,19 @@ jobs:
       - name: List files
         run: |
           ls -la
-      - name: Touch file
+      - name: Touch files
         run: |
           echo "BLA" > file1
+          echo "BLA" > file2
           ls -la
       - name: Zip file
         run: |
-          zip --junk-paths file.zip file1
+          tar czf file.tar.gz file1
+          zip --junk-paths file2.zip file2
       - name: Hash File
         run: |
-          sha256sum file.zip > file.zip.sha256
+          sha256sum file.tar.gz > file.tar.gz.sha256
+          sha256sum file2.zip > file2.zip.sha256
       - name: List files
         run: |
           ls -la
