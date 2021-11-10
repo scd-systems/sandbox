@@ -25,4 +25,4 @@ jobs:
           ls -la
       - name: Zip file
         run: |
-          zip file.zip file
+          zip --junk-paths file.zip file1
