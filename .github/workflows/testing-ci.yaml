@@ -26,6 +26,9 @@ jobs:
       - name: Zip file
         run: |
           zip --junk-paths file.zip file1
+      - name: Hash File
+        run: |
+          sha256sum file.zip > file.zip.sha256
       - name: List files
         run: |
           ls -la
