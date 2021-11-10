@@ -26,3 +26,6 @@ jobs:
       - name: Zip file
         run: |
           zip --junk-paths file.zip file1
+      - name: List files
+        run: |
+          ls -la
