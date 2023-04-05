@@ -1,2 +1,1 @@
-Name: app-111
-Version: 0.9
+{{ .Name }}-{{ .Version }}-dev
