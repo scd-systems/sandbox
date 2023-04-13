@@ -8,4 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-* Created main.go
+* Testing CR Notes
+* Testing Package Path
