@@ -30,8 +30,7 @@ jobs:
         uses: helm/chart-releaser-action@v1.5.0
         with:
           charts_dir: charts/v1beta1/
-          config: .github/workflows/config-v1beta1.yaml
         env:
           CR_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           CR_RELEASE_NOTES: CHANGELOG.md
-          # CR_RELEASE_NAME_TEMPLATE: "{{ .Name }}-{{ .Version }}-dev"
+          CR_RELEASE_NAME_TEMPLATE: "{{ .Name }}-{{ .Version }}-v1beta1"
