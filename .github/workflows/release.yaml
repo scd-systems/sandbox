@@ -32,5 +32,5 @@ jobs:
           charts_dir: charts/v1beta1/
         env:
           CR_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          CR_RELEASE_NOTES: CHANGELOG.md
+          CR_RELEASE_NOTES_FILE: CHANGELOG.md
           CR_RELEASE_NAME_TEMPLATE: "{{ .Name }}-{{ .Version }}-v1beta1"
