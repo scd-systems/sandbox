@@ -1,0 +1,37 @@
+name: Testing-CI
+
+on: push
+
+jobs:
+  build_release:
+    name: testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Go 1.17
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+        id: go
+      - name: List files
+        run: |
+          ls -la
+      - name: Touch files
+        run: |
+          echo "BLA" > file1
+          echo "BLA" > file2
+          ls -la
+      - name: Zip file
+        run: |
+          tar czf file.tar.gz file1
+          zip --junk-paths file2.zip file2
+      - name: Hash File
+        run: |
+          sha256sum file.tar.gz > file.tar.gz.sha256
+          sha256sum file2.zip > file2.zip.sha256
+      - name: List files
+        run: |
+          ls -la
