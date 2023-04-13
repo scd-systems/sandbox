@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  app1:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-04-13T15:50:05.31381968Z"
+    description: Helm Chart
+    digest: 17292be06f50695c364056e75c5721210dbbb707f74cadde9a93e6b2cf42c681
+    name: app1
+    urls:
+    - https://github.com/scd-systems/sandbox/releases/download/app1-0.1.5-v1beta1/app1-0.1.5.tgz
+    version: 0.1.5
+  app2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-04-13T15:50:05.50316651Z"
+    description: Helm Chart
+    digest: 56ea52b15e786e75b2f2e3dcd4a84c063a6a1f00c94bc9704f8ca276f4c3dbc6
+    name: app2
+    urls:
+    - https://github.com/scd-systems/sandbox/releases/download/app2-0.2.5-v1beta1/app2-0.2.5.tgz
+    version: 0.2.5
+generated: "2023-04-13T15:50:05.50317061Z"
