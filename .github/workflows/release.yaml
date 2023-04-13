@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     paths:
-      - 'charts/**'
+      - 'charts/v1beta1/**'
 
 jobs:
   release:
